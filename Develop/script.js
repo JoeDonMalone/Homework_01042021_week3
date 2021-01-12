@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+
 function generatePassword() {
   var options = {
     "chars": [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "'\'", "]", "^", "_", "", "{", "|", "}", "~" ],
@@ -20,6 +20,7 @@ function generatePassword() {
       alert("Please enter a number >=0 but <= 128")
       return generatePassword();
     }
+    
   var specCharsChoice = confirm("Would you like to use special characters in your password?"); 
   var lettersChoice = confirm("Would you like to use letters in your password");
   var numbersChoice = confirm("Would you like to use numbers in your password");
@@ -53,7 +54,7 @@ function generatePassword() {
   } createPW();
   return generatedPassword;
 }
-
+// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
